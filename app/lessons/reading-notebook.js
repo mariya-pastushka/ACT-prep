@@ -5,7 +5,11 @@ export default function ReadingNotebook({data}){return <article className={`${st
  <h3>{data.title}</h3><p>{data.intro}</p>
  <div className={css.words}>{data.vocabulary.map(item=><section key={item.word} className={css.word}>
   <h4 lang="en">{item.word}</h4><p className={css.meaning}>{item.meaning}</p>
-  <a className={shared.insertion} href={'#source-line-'+item.from}>В тексте: строки {item.from}–{item.to} ↑</a>
+  {item.source ? (
+    <a className={shared.insertion} href={'#' + item.source.id}>{item.source.ru} ↑</a>
+  ) : (
+    <a className={shared.insertion} href={'#source-line-'+item.from}>В тексте: строки {item.from}–{item.to} ↑</a>
+  )}
   <blockquote className={css.context}><p lang="en">{item.context}</p><p>{item.contextRu}</p></blockquote>
   <h5>Новый пример</h5><p lang="en">{item.example}</p><p>{item.exampleRu}</p>
  </section>)}</div>

@@ -1,0 +1,68 @@
+const lessons = [
+  {
+    title: 'Сравнение с than', enTitle: 'Comparatives: than vs. then',
+    explain: ['Если сравниваем две вещи или две оценки, часто сначала появляется слово more, less или форма на -er. Than вводит вторую часть сравнения.', 'Then отвечает на вопрос «когда?» или «что было дальше?». Замени слово в уме русским «чем» или «затем» и проверь смысл. В вопросе 31 сравнивают репутацию змей с тем, какими автор их считает на самом деле.'],
+    formula: 'more / less + adjective + than; adjective-er + than. Then = затем, тогда.',
+    examples: [['This chapter is shorter than the first one.', 'Эта глава короче первой. Than вводит то, с чем сравнивают.'], ['We read the chapter, then discussed it.', 'Мы прочитали главу, затем обсудили её. Then показывает порядок действий.']],
+    notebook: 'Напиши одно сравнение с longer than и одно предложение о порядке действий с then.',
+    en: 'Use than to introduce the second part of a comparison. Use then for time or sequence.',
+    example: 'The lesson was easier than I expected. I finished it, then checked my answers.',
+  },
+  {
+    title: 'К какому слову относится описание?', enTitle: 'Adjectives, possessives and the scope of only',
+    explain: ['В вопросе 33 popular описывает reference, поэтому поставь его рядом: a popular reference to a snake. В вопросе 34 its отвечает на вопрос «чей?». It’s можно развернуть в it is или it has.', 'Слово only ставь рядом с тем, что оно ограничивает. Only if вводит необходимое условие. В вопросе 37 оно ограничивает условие нападения целиком.'],
+    formula: 'a useful method · its purpose · it’s = it is / it has · only if = только при условии, что',
+    examples: [['The app saves its settings. It’s ready to use.', 'Приложение сохраняет свои настройки. Оно готово к использованию.'], ['I’ll send the file only if you ask. I’ll send only the file.', 'Я отправлю файл только по твоей просьбе. Я отправлю только файл, без других материалов.']],
+    notebook: 'Подчеркни, что ограничивает only в каждом примере. Затем попробуй развернуть it’s.',
+    en: 'Place a simple adjective before the noun it describes. Use its to show possession. Place only next to the word or phrase that it limits.',
+    example: 'A useful rule has its limits. Apply it only if it fits the sentence.',
+  },
+  {
+    title: 'Парные запятые вокруг вставки', enTitle: 'Paired commas around extra information',
+    explain: ['Если внутри предложения появилось дополнительное описание, попробуй временно убрать его. В вопросе 35 из Their fangs, so intimidating when the snakes are hissing, are designed … получается Their fangs are designed … .', 'Слова fangs и are designed образуют основу. Запятая до описания и запятая после него показывают читателю, где начинается и где заканчивается вставка.'],
+    formula: 'подлежащее + запятая + дополнительное описание + запятая + сказуемое',
+    examples: [['The path, narrow and steep, leads to a river.', 'Тропа, узкая и крутая, ведёт к реке. Основа: The path leads to a river.'], ['The path behind the house leads to a river.', 'Тропа за домом ведёт к реке. Здесь behind the house помогает понять, о какой тропе речь.']],
+    notebook: 'Выдели вставку в первом примере и прочитай оставшуюся основу вслух.',
+    en: 'Use a pair of commas when an extra description interrupts the main sentence. Remove the description to check whether the core sentence works.',
+    example: 'The lantern, dusty from years in storage, still worked.',
+  },
+  {
+    title: 'Двоеточие или точка с запятой?', enTitle: 'Colons, semicolons and sentence boundaries',
+    explain: ['Двоеточие может открыть список после законченной мысли. В вопросе 36 автор сперва говорит, для чего нужны клыки, а затем перечисляет примеры добычи.', 'Точка с запятой может соединить два самостоятельных предложения. В вопросе 42 сначала стоит We may not like snakes, затем идёт отдельная мысль со своей основой we would be … overrun. If they were … задаёт условие для второй мысли.'],
+    formula: 'законченная мысль: список или пояснение. Самостоятельная часть; самостоятельная часть.',
+    examples: [['We brought two things: a map and a flashlight.', 'Мы взяли две вещи: карту и фонарик. После двоеточия перечисление.'], ['I had a map; my friend had a flashlight.', 'У меня была карта. У друга был фонарик. Обе части можно написать отдельными предложениями.']],
+    notebook: 'Проверь, есть ли по обе стороны знака отдельные основы. Перед двоеточием проверь, можно ли закончить мысль прямо там.',
+    en: 'A colon can introduce examples after a complete clause. A semicolon can link two closely related independent clauses. A comma alone does not join two independent clauses.',
+    example: 'I brought a map; we still packed two essentials: a flashlight and a spare battery.',
+  },
+  {
+    title: 'Подлежащее и параллельные действия', enTitle: 'Agreement, modal verbs and parallel structure',
+    explain: ['В вопросе 39 treatment — подлежащее. Оборот с with уточняет способ лечения. После can ставится базовая форма, поэтому can do подходит и к treatment, и к подлежащему во множественном числе.', 'В вопросе 41 most people выполняет два действия: consider и avoid. Прочитай каждое действие отдельно с общим подлежащим. Это поможет выбрать одинаковую форму для обоих действий.'],
+    formula: 'can + базовая форма глагола. Most people + consider … and avoid … .',
+    examples: [['A bag of tools can weigh ten kilos.', 'Сумка с инструментами может весить десять килограммов. Bag — подлежащее, tools входит в уточнение.'], ['Most readers scan the headings and underline the key phrases.', 'Большинство читателей просматривает заголовки и подчёркивает ключевые фразы. Scan и underline относятся к одному подлежащему.']],
+    notebook: 'Зачеркни уточнение с of или with. Подпиши подлежащее и главные глаголы.',
+    en: 'Find the subject before choosing the verb. Use a base verb after can. Keep coordinated actions parallel when they share the same subject and construction.',
+    example: 'A team of students can plan the experiment and record the results.',
+  },
+  {
+    title: 'Причина, уступка и условие', enTitle: 'Choosing the connection between ideas',
+    explain: ['Because и seeing as называют причину: «потому что» или «поскольку». Even if означает «даже если» и вводит возможное препятствие, при котором результат всё равно сохраняется.', 'В вопросе 40 still shaken описывает состояние человека после происшествия. Автор допускает это состояние, а and соединяет утверждение о лечении с последующей мыслью.'],
+    formula: 'because / seeing as = поскольку · even if = даже если · and = и',
+    examples: [['I took an umbrella because it was raining.', 'Я взял зонт, потому что шёл дождь. Дождь объясняет решение.'], ['I’ll take an umbrella even if it stops raining.', 'Я возьму зонт, даже если дождь прекратится. Возможное условие не меняет решение.']],
+    notebook: 'Прочитай обе части с «потому что», затем с «даже если». Какая связь сохраняет смысл?',
+    en: 'Because gives a reason. Even if presents a possible condition that does not change the outcome. Read the whole sentence to check the relationship.',
+    example: 'I’ll finish the project even if I need another day.',
+  },
+  {
+    title: 'Как проверить роль предложения в эссе', enTitle: 'Relevance, support, thesis and conclusion',
+    explain: ['Для вставки в вопросе 32 сравни предложение до и после неё. Оба объясняют устойчивые выражения, поэтому новый пример должен делать то же. В вопросе 38 найди тезис и цифру, которая его подкрепляет.', 'Для вопросов 43–45 прочитай конец первого абзаца и последнее предложение. Во вступлении автор формулирует тезис о репутации змей, а в заключении возвращает выражение snakes in the grass и напоминает о пользе змей.'],
+    formula: 'Вставка → соседи. Удаление → функция детали. Цель эссе → тезис, аргументы и финал.',
+    examples: [['“Few students bike to school. Only 8 out of 100 surveyed students ride a bike.”', '«Мало учеников ездит в школу на велосипеде. Из 100 опрошенных только восемь приезжают на велосипеде». Второе предложение даёт число в поддержку первого.'], ['Opening: “I called it a wasted space.” Ending: “That ‘wasted space’ now feeds the neighborhood.”', 'Во вступлении автор называет место пустующей площадкой. Финал возвращает ту же фразу и показывает, что теперь она кормит район.']],
+    notebook: 'Сформулируй тезис эссе о змеях одной фразой и выпиши один аргумент из текста.',
+    en: 'Check the sentences around an insertion. For a deletion, name the detail and its function. For a whole-essay question, use the thesis, the body, and the ending.',
+    example: 'A number can support a claim. A repeated phrase can connect the opening and ending.',
+  },
+];
+
+export const lecture = lessons.map(({ enTitle, en, example }) => ({ title: enTitle, en, example }));
+export const lectureRu = lessons.map(({ title, explain, formula, examples, notebook }) => ({ title, explain, formula, examples, notebook }));
