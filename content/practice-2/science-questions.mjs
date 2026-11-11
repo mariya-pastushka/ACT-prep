@@ -1,7 +1,8 @@
 import {row as m,frac as f,words as w} from './math-notation.mjs';
+import {deicerQuestions} from './deicer-questions.mjs';
 const ref=(id,label)=>({id,label});
 const make=(id,prompt,options,key,topic,support,extra={})=>({id,prompt,key,topic,choices:[...(id%2?'ABCD':'FGHJ')].map((label,i)=>({label,text:options[i]})),...support,...extra});
-export const scienceQuestions=[
+export const springQuestions=[
  make(1,'In a new study, suppose the students had placed a 10.0 N weight on Spring A only. Which of the following drawings most likely represents the results of this experiment?',[
   '0.15 m','0.30 m','0.40 m','0.50 m'
  ],'D','One spring versus two sharing a load',{
@@ -91,3 +92,4 @@ export const scienceQuestions=[
   whyRu:'F и G выбирают Trial 5, где растяжение меньше. J выбирает Trial 6, но неправильно объясняет его меньшей силой. Только H верен целиком.'
  })
 ];
+export const scienceQuestions=[...springQuestions,...deicerQuestions];

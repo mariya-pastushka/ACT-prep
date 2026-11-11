@@ -1,49 +1,40 @@
-# Practice 2 — Science, Questions 1–6
+# Practice 2 — Science
 
-Route: `/lessons/practice-2/science`.
-The supplied test has 12 questions, but only Questions 1–6 have been provided.
-Only those six are rendered, graded or explained. Key: `D G A H B H`.
+Route: `/lessons/practice-2/science`. All 12 supplied questions are included:
+springs and forces (1–6), then de-icing mixtures (7–12).
+Supplied key: `D G A H B H C J A H C G`.
 
-## Original figures
+## Figures and tables
 
-The user explicitly required exact correspondence with the original drawings.
-Five source PNGs are copied unchanged into `public/practice-2/science`. Their
-original SHA-256 hashes are recorded in `science-source-assets.json` and checked
-in tests. No AI regeneration, resampling or redrawing is used.
+The original spring diagrams and de-icing Figure 1 are kept byte-for-byte in
+`public/practice-2/science`. The six source PNG hashes are recorded in
+`science-source-assets.json` and checked in tests. SVG viewports show the diagrams
+without modifying their bytes. The passages each have a Figure 1; evidence
+anchors use `springs-` or `deicer-` prefixes to avoid ambiguity. Enlargement
+preserves original axes, labels, bends and angles. Question 1 repeats its
+measurements as clean text. Question 10 has four structural MathML fractions.
+Both de-icing tables retain all source values and headings.
 
-`scienceFigures` defines native source dimensions and display viewports. The SVG
-wrapper clips away surrounding passage text without changing the image bytes.
-All spring bends, board angles, loads, dimensions and type remain original.
-Question 1 uses four viewports of its original answer drawings, including the
-original letters. Separate clean text captions repeat the printed lengths so the
-partly obscured zero in source option B remains unambiguous without retouching.
-Modal enlargement
-and a zoom slider allow inspecting small labels, including on narrow screens.
-Printed-measurement tables provide an accessible equivalent of the trial data.
+## Teaching decisions
 
-Do not reconstruct shapes from numerical lengths: the source diagrams are
-schematic. In particular, retain all board tilts in Figure 4 and distinguish the
-0.25 m movable board from the 0.50 m upper B–C separation.
+- Keep the original six spring questions and lessons. Use the supplied symmetric
+  load-sharing model without deriving unreported forces from schematic angles.
+- Q7 checks each estimate against its neighboring observations; no exact linear
+  temperature response is assumed.
+- Q8 and Q10 use part / whole for Table 1's two-component mixtures. The
+  magnesium-chloride experiment measures a performance index, not concentration.
+- Q11 uses the starting proof and the observed trend for a qualitative estimate.
+  The graph does not directly measure the new recipe or set a universal ceiling.
+- Q9 and Q12 distinguish measured proof from the minimum TR and compare them
+  within the same row. Eleven bilingual concepts and 24 vocabulary entries
+  include rates, proportions, freezing point, interpolation, plateaus and TR.
 
-## Evidence and scope
+## Attempts
 
-- Unloaded length is 0.30 m; extension is measured from that value.
-- Q1 compares one 10 N load with the equal share in Trial 3's 20 N pair.
-- Q2 uses B lengths 0.45 → 0.40 → 0.32 m, not C lengths.
-- Q4 uses the question's symmetric load-sharing comparison: the total supported
-  load in Trial 5 includes the board and the placed 5 N weight.
-- Do not infer undisclosed numerical spring forces in the tilted trials. The
-  source test uses an idealized load-sharing comparison; do not replace its
-  diagrams with a newly assumed geometry or infer an axial stiffness from them.
-- Q6 compares extensions 0.10 and 0.20 m of the same spring. The lecture gives
-  the ideal linear elastic-energy formula and clearly distinguishes extension
-  from total length. No numerical joule value is invented.
+Full attempts use `act-space-practice-2-science-v2`. If no v2 record exists,
+valid answers 1–6 are copied from v1 into an unlocked draft. Learners can finish
+7–12 and check the full test. The old record stays intact. A current v2 record,
+including an intentionally cleared draft, always wins. Scores are correct / 12.
 
-Six bilingual concept lessons, twelve vocabulary entries and self-check exercises
-unlock after submission. Fractions use the existing native MathML renderer.
-Attempt key: `act-space-practice-2-science-v1`, currently scoped to six available
-items. Revisit attempt migration/versioning when adding Questions 7–12 so a
-previously submitted six-question attempt is not silently treated as a full test.
-
-Checks: `node --test tests/*.test.mjs`, `npm run build`, and browser verification
-of source viewports, enlargement, selection, submission and mobile layout.
+Run `node --test tests/*.test.mjs` and `npm run build`. Verify the original graph,
+tables, fractions, answer persistence and full submission in the browser.

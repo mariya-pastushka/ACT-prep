@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {scienceStorageKey,plannedQuestionCount,unloadedLength,trialData,scienceFigures,singleSpringOptions} from '../content/practice-2/science-data.mjs';
-import {scienceQuestions as qs} from '../content/practice-2/science-questions.mjs';
-import {scienceLecture,scienceVocabulary} from '../content/practice-2/science-lecture.mjs';
+import {springQuestions as qs} from '../content/practice-2/science-questions.mjs';
+import {springLecture as scienceLecture,springVocabulary as scienceVocabulary} from '../content/practice-2/science-lecture.mjs';
 import {englishTest} from '../content/practice-2/english-test.mjs';
 import {readingTest} from '../content/practice-2/reading-test.mjs';
 import {englishPracticeResult,restoreEnglishAttempt} from '../lib/english-practice.mjs';
 const near=(a,b)=>Math.abs(a-b)<1e-12;
 
-test('Science 2 includes only the six uploaded questions and their supplied key',()=>{
+test('the original six spring questions retain their supplied key',()=>{
  assert.equal(plannedQuestionCount,12);assert.deepEqual(qs.map(q=>q.id),[1,2,3,4,5,6]);
  assert.deepEqual(qs.map(q=>q.key),['D','G','A','H','B','H']);
  for(const q of qs){assert.deepEqual(q.choices.map(c=>c.label),[...(q.id%2?'ABCD':'FGHJ')]);assert.equal(q.choices.filter(c=>c.label===q.key).length,1);assert.equal(new Set(q.choices.map(c=>c.text)).size,4);}
@@ -20,7 +20,7 @@ test('Science 2 includes only the six uploaded questions and their supplied key'
 
 test('source assets are byte-identical to the supplied originals and keep their actual PNG dimensions',()=>{
  const manifest=JSON.parse(readFileSync(new URL('../content/practice-2/science-source-assets.json',import.meta.url),'utf8').replace(/^\uFEFF/,''));
- assert.equal(manifest.length,5);
+ assert.equal(manifest.length,6);
  for(const asset of Object.values(scienceFigures)){
   const bytes=readFileSync(new URL('../public'+asset.src,import.meta.url));
   assert.equal(bytes.subarray(1,4).toString(),'PNG');
@@ -57,7 +57,7 @@ test('mini-lecture has complete bilingual exercises and a useful physics vocabul
  for(const item of scienceVocabulary)for(const field of ['term','ru','example','exampleRu'])assert.ok(item[field]);
 });
 
-test('partial Science scoring uses six, keeps attempts separate and links from other Practice 2 sections',()=>{
+test('spring subset grading and Practice 2 section links remain valid',()=>{
  const full=Object.fromEntries(qs.map(q=>[q.id,q.key])),r=englishPracticeResult(qs,full);assert.equal(r.total,6);assert.equal(r.correct,6);assert.equal(r.percent,100);
  const mixed=englishPracticeResult(qs,{1:'D',2:'F'});assert.equal(mixed.correct,1);assert.equal(mixed.incorrect,1);assert.equal(mixed.unanswered,4);assert.equal(mixed.percent,17);
  assert.equal(englishPracticeResult(qs,{}).unanswered,6);

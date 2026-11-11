@@ -18,5 +18,9 @@
   {
     "file": "question-1-source.png",
     "sha256": "d734560b00323d40b488c30ce0cd2b8db66efddd92bca7d1acb3be0f22d1352c"
+  },
+  {
+    "file": "deicer-figure-1-source.png",
+    "sha256": "0efa0434c5a97ee787707d47bd8345bc9d536e06613d8bb92751e29a0bd0919c"
   }
 ]

@@ -1,4 +1,5 @@
-export const scienceStorageKey='act-space-practice-2-science-v1';
+export const legacyScienceStorageKey='act-space-practice-2-science-v1';
+export const scienceStorageKey='act-space-practice-2-science-v2';
 export const plannedQuestionCount=12;
 export const springsPassage={
  title:'Forces and springs',
@@ -24,7 +25,8 @@ export const scienceFigures={
  figure2:{src:root+'figure-2-source.png',width:696,height:579,crop:[9,5,435,526],title:'Figure 2',alt:'Original Figure 2, Trials 1–3. A and B share weights of 10.0, 15.0 and 20.0 N. Both lengths are 0.40, 0.45 and 0.50 m respectively. Spring C remains unattached. The support gaps are 0.25 m and 0.50 m.'},
  figure3:{src:root+'figure-3-source.png',width:1221,height:280,crop:[12,96,409,140],title:'Figure 3',alt:'Original Figure 3. A 0.25 m board is suspended from Springs B and C, each labeled 0.35 m. The board is horizontal. The support gaps A–B and B–C are 0.25 m and 0.50 m. Spring A remains unattached.'},
  figure4:{src:root+'figure-4-source.png',width:454,height:605,crop:[0,0,454,605],title:'Figure 4',alt:'Original Figure 4, Trials 4–6. The 5.0 N weight is 0.075, 0.125 and 0.200 m from Spring B. B/C lengths are 0.45/0.34, 0.40/0.40 and 0.32/0.50 m. The board slopes up to the right, is level, then slopes down to the right. All printed dimensions are retained.'},
- question1:{src:root+'question-1-source.png',width:1148,height:436,crop:[33,32,138,404],title:'Question 1 · Original answer drawings',alt:'Original answer drawings A–D. One loaded spring has a labeled length of 0.15, 0.30, 0.40 or 0.50 m respectively.'}
+ question1:{src:root+'question-1-source.png',width:1148,height:436,crop:[33,32,138,404],title:'Question 1 · Original answer drawings',alt:'Original answer drawings A–D. One loaded spring has a labeled length of 0.15, 0.30, 0.40 or 0.50 m respectively.'},
+ deicerFigure1:{src:root+'deicer-figure-1-source.png',width:624,height:335,crop:[18,16,356,282],title:'De-icing · Figure 1',alt:'Original de-icing Figure 1. Horizontal axis: volume of magnesium chloride, 0–8 mL. Vertical axis: de-icer proof, 100–112. The curve rises from 100 and levels off between 111 and 112 at about 4 mL, remaining nearly flat through 8 mL.'}
 };
 export const singleSpringOptions=[
  {label:'A',length:0.15,crop:[33,32,139,100]},

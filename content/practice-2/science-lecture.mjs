@@ -1,5 +1,6 @@
 import {row as m,frac as f,power as p,words as w} from './math-notation.mjs';
-export const scienceLecture=[
+import {deicerLecture,deicerVocabulary} from './deicer-lecture.mjs';
+export const springLecture=[
  {title:'1 · Length and extension are different',titleRu:'1. Длина и удлинение: сначала найди исходное значение',questions:[1,2,5,6],
   en:['Length is the entire end-to-end measurement. Extension is the amount added beyond the unloaded length. In this passage, the unloaded length is 0.30 m for every spring.','A spring labeled 0.50 m therefore has an extension of 0.20 m, not 0.50 m. To compare force or stored energy, identify this change first. Use the printed dimensions; the drawings are schematic.'],
   ru:['Полная длина — расстояние от одного конца пружины до другого. Удлинение — насколько она стала длиннее по сравнению с исходным состоянием. В этой задаче исходная длина L₀ = 0,30 м.','Для длины 0,50 м удлинение равно 0,50 − 0,30 = 0,20 м. Если перепутать эти величины, можно выбрать неверный рисунок или неправильно сравнить энергию. По внешней высоте витков на экране ничего не измеряем: используем подписи.'],
@@ -54,7 +55,7 @@ export const scienceLecture=[
   taskEn:'What does the high-friction surface help keep unchanged during a trial?',taskRu:'Что помогает сохранять неизменным поверхность с высоким трением во время отдельного trial?',
   answerEn:'The weight’s chosen position on the board: it does not slide as the board tilts.',answerRu:'Выбранное положение груза на доске: при наклоне он не соскальзывает в другое место.'}
 ];
-export const scienceVocabulary=[
+export const springVocabulary=[
  {term:'spring / spring constant',ru:'пружина / коэффициент жёсткости',example:'Identical springs have the same spring constant.',exampleRu:'У одинаковых пружин одинаковая жёсткость.'},
  {term:'unloaded / normal length',ru:'без нагрузки / исходная длина',example:'The unloaded length is 0.30 m.',exampleRu:'Без нагрузки длина равна 0,30 м.'},
  {term:'extension / stretch',ru:'удлинение / растягивать(ся)',example:'Extension is the increase beyond the unloaded length.',exampleRu:'Удлинение — прибавка к исходной длине.'},
@@ -68,3 +69,5 @@ export const scienceVocabulary=[
  {term:'equally distributed',ru:'распределённый поровну',example:'In Trial 5, the load is equally distributed between B and C.',exampleRu:'В Trial 5 нагрузка распределена поровну между B и C.'},
  {term:'potential energy / stored energy',ru:'потенциальная энергия / запасённая энергия',example:'A stretched spring stores elastic potential energy.',exampleRu:'Растянутая пружина запасает упругую потенциальную энергию.'}
 ];
+export const scienceLecture=[...springLecture,...deicerLecture];
+export const scienceVocabulary=[...springVocabulary,...deicerVocabulary];
