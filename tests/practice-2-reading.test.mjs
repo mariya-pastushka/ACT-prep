@@ -51,9 +51,9 @@ test('Reading grades correct, wrong, and blank answers without scaled ACT predic
  const restored=restoreEnglishAttempt(JSON.parse(JSON.stringify({answers:{1:'C',2:'G',3:'Z',4:2},submitted:true})),qs);assert.deepEqual(restored,{answers:{1:'C',2:'G'},submitted:true});
 });
 
-test('Reading is enabled only in Practice 2 and has an independent saved attempt',()=>{
+test('Reading sections have separate routes and the Practice 2 attempt remains independent',()=>{
  assert.equal(english2.nav.find(n=>n.label==='Reading').href,'/lessons/practice-2/reading');
- assert.equal(english1.nav.find(n=>n.label==='Reading').disabled,true);
+ assert.equal(english1.nav.find(n=>n.label==='Reading').href,'/lessons/practice-1/reading');
  assert.equal(reading.nav.find(n=>n.label==='Reading').current,true);
  assert.equal(reading.nav.find(n=>n.label==='English').href,'/lessons/practice-2');
  assert.equal(new Set([english1.storageKey,english2.storageKey,reading.storageKey]).size,3);

@@ -4,8 +4,8 @@ import {evidenceRu,lectureRu} from './russian-support.mjs';
 export const englishTest={
  id:'practice-1',title:'Practice 1',storageKey:'act-space-practice-1-english-v1',
  passage:practiceEnglish,questions:englishQuestions,lecture,evidenceRu,lectureRu,
- nav:[{label:'English',current:true},{label:'Mathematics',href:'/lessons/practice-1/math'},{label:'Reading',disabled:true},{label:'Science',href:'/lessons/practice-1/science'}],
- introNote:'English, Mathematics, and Science are available. Reading will be added when its materials are supplied. Your answers stay in this browser.',
+ nav:[{label:'English',current:true},{label:'Mathematics',href:'/lessons/practice-1/math'},{label:'Reading',href:'/lessons/practice-1/reading'},{label:'Science',href:'/lessons/practice-1/science'}],
+ introNote:'All four Practice 1 sections are available: English, Mathematics, Reading, and Science. Each section keeps its answers saved separately in this browser.',
  insertions:[{afterParagraph:3,questionId:13,label:'[13] Consider an additional sentence here ↗︎'}],
  notebook:['Become → became → become. После had нужна третья форма: had become.','У предложения должна быть самостоятельная основа — main clause. Оборот с -ing её не заменяет.','Определяющее слово или оборот — modifier — ставь рядом с тем, что оно описывает.','Один участник и два действия: обычно запятая перед and не нужна.','Связки выбирай по смыслу. LEAST означает «наименее»: в таком вопросе ищем плохую замену.','Составь свой пример на каждое правило. Объясни по-русски, почему он построен именно так.']
 };
