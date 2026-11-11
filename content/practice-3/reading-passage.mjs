@@ -1,0 +1,121 @@
+// Each entry is a line in the supplied passage, even when the browser wraps it differently.
+const paragraphs = [
+  [
+    'From the time I started playing instruments, I have been',
+    'intrigued and slightly mystified by the world of jazz. I’m not talk-',
+    'ing about adventurous, atonal, confusing jazz that normal music',
+    'listeners have a hard time following. I’m talking about the lively,',
+    'accessible, beautiful jazz that came of age in the swinging 1920s',
+    'and 1930s: the simultaneously hip and regal symphonic swing',
+    'of Duke Ellington and Count Basie; the carnival of contrapuntal',
+    'melodies that inexplicably harmonize with each other in New',
+    'Orleans’ jazz; the buoyant, atmosphere-touching saxophone solos',
+    'of Charlie Parker and the young John Coltrane.',
+  ],
+  [
+    'The one thing I had always heard about jazz but could',
+    'never accept was that jazz was an improvised form of music.',
+    'How could this be?',
+  ],
+  [
+    'The trademark of beautiful jazz is the complexity of the',
+    'music. All the instrumentalists are capable of dizzying arrays',
+    'of notes and rhythms. The soloists find seemingly impossible',
+    'transitions from one phrase to the next that are so perfect one',
+    'would think they had spent weeks trying to devise just the right',
+    'route to conduct safe passage. To think they spontaneously craft',
+    'these ideas seems preposterous.',
+  ],
+  [
+    'My first nervous jabs into the world of jazz came during col-',
+    'lege. I was in a rock band, but my fellow guitarist and bandmate,',
+    'Victor, also played in a jazz ensemble. At our practices, I would',
+    'sometimes show off a new chord I had just “invented” only to',
+    'have him calmly and confidently name it, “Oh, you mean C-sharp',
+    'diminished?” Often, in between our band’s simplistic rock songs,',
+    'I would look over and see him playing chord shapes on his guitar',
+    'I had never seen before. Were we playing the same instrument?',
+  ],
+  [
+    'Of course, rock music, as well as most early classical mu-',
+    'sic, operates within a much simpler harmonic world than does',
+    'jazz. There are 12 tones in Western music: A-flat, A, B-flat, B,',
+    'C, D-flat, D, E-flat, E, F, G-flat, and G. There are major chords,',
+    'which sound happy, and minor chords, which sound sad. Es-',
+    'sentially, rock music requires only that you learn the major and',
+    'minor chord for each of the 12 tones. If you do, you can play 99',
+    'percent of all the popular radio songs from the 1950s onward.',
+  ],
+  [
+    'Jazz uses the same twelve tones as do rock and classical, but',
+    'it employs a much more robust variety of chords. Major sevenths,',
+    'augmented fifths, flat ninths, and diminished chords all add to',
+    'the depth and detail of the music. These often bizarre-sounding',
+    'chords toss in subtle hints of chaos and imbalance, adding a',
+    'worldly imperfection to otherwise standard chord values. Jazz',
+    'starts sounding better the older you get, just as candy starts tasting',
+    'too sweet and a bit of bitterness makes for a more appealing flavor.',
+  ],
+  [
+    'For the most part, Victor’s elliptical personality prevented',
+    'him from ever giving me straightforward explanations when I',
+    'asked him to divulge the “magician’s secrets” of jazz. But I did',
+    'learn that jazz is only partly improvised. The musicians aren’t',
+    'inventing the structure of songs spontaneously, just the specific',
+    'details and embellishments. A sheet of jazz music doesn’t look',
+    'like a sheet of classical music. There aren’t notes all over the',
+    'page dictating the “ideas.” There are just chord names spaced',
+    'out over time, dictating the “topic of conversation.”',
+  ],
+  [
+    'There’s a legendary book in the jazz world known as “The',
+    'Real Book.” It’s a collection of a few hundred classic songs.',
+    'Open it up in any room full of jazz musicians, and they could',
+    'play in synchrony for a week. For years, I wanted my own copy,',
+    'but I had always been too afraid to buy it, afraid that I wouldn’t',
+    'know how to use the book once I had it. Then, at age 30, more',
+    'than a decade since Victor and I had gone our separate ways,',
+    'I bought myself a copy. I resolved to learn how to play all the',
+    'chords on guitar and piano. For the next few months, I quietly',
+    'plucked away at these strange, new combinations. F-sharp minor-7',
+    'flat-5? Each chord was a cryptic message I had to decode and',
+    'then understand. It felt like being dropped off alone in a country',
+    'where I didn’t speak the language.',
+  ],
+  [
+    'But I made progress. Chords that initially took me twenty',
+    'seconds to figure out started to take only a few. My left hand',
+    'was becoming comfortable in its role of supplying my right hand',
+    'with a steady bass line. Meanwhile, to my amazement, my right',
+    'hand began to improvise melodies that sounded undeniably jazzy.',
+  ],
+  [
+    'It seemed like the hard work of figuring out the exotic jazz',
+    'chords had sent new melodic understanding straight to my hand,',
+    'bypassing my brain entirely. I felt like a witness to performances',
+    'by detached hands; I couldn’t believe that I was the one creating',
+    'these sounds. I’m sure this feeling will not last, but for now I’m',
+    'enjoying the rare and miraculous feeling of improvising music',
+    'that I still consider beyond my abilities.',
+  ],
+];
+
+let number = 0;
+const lineGroups = paragraphs.map(lines => lines.map((raw, index) => {
+  const wrapsWord = raw.endsWith('-');
+  return {
+    number: ++number,
+    text: wrapsWord ? raw.slice(0, -1) : raw,
+    joinAfter: wrapsWord || index === lines.length - 1 ? '' : ' ',
+  };
+}));
+
+export const readingPassage = {
+  title: 'Conquering Jazz',
+  attribution: 'HUMANITIES: The following passage is adapted from the article “Conquering Jazz” by Patrick Tyrrell (© 2006 by Patrick Tyrrell).',
+  source: 'The passage and line numbers follow the supplied screenshots. Hyphens used to split words at the end of a printed line have been joined.',
+  sourceUrl: 'https://www.crackab.com/act/reading/test203.html',
+  sourceLines: lineGroups.flat(),
+  lineRanges: lineGroups.map(lines => ({ from: lines[0].number, to: lines.at(-1).number })),
+  paragraphs: lineGroups.map(lines => lines.map(line => line.text + line.joinAfter).join('')),
+};

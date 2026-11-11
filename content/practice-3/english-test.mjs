@@ -11,7 +11,7 @@ export const englishTest = {
   nav: [
     { label: 'English', current: true },
     { label: 'Mathematics', href: '/lessons/practice-3/math' },
-    { label: 'Reading', disabled: true },
+    { label: 'Reading', href: '/lessons/practice-3/reading' },
     { label: 'Science', disabled: true },
   ],
   passage,

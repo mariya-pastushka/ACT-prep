@@ -12,7 +12,7 @@ const test = {
   nav: [
     { label: 'English', href: '/lessons/practice-3' },
     { label: 'Mathematics', current: true },
-    { label: 'Reading' },
+    { label: 'Reading', href: '/lessons/practice-3/reading' },
     { label: 'Science' },
   ],
   instructions: 'Choose one answer per question. Odd questions use A–E. Even questions use F, G, H, J, K. Use the labels and relationships shown in the diagrams.',
