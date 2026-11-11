@@ -71,7 +71,7 @@ test('every explanation has source references and distinct clear English and Rus
 
 test('Science uses a validated independent attempt and enables only the requested practice',()=>{
  assert.equal(english1.nav.find(x=>x.label==='Science').href,'/lessons/practice-1/science');
- assert.equal(english2.nav.find(x=>x.label==='Science').disabled,true);
+ assert.equal(english2.nav.find(x=>x.label==='Science').href,'/lessons/practice-2/science');
  assert.equal(new Set([scienceStorageKey,english1.storageKey,'act-space-practice-1-math-v1',english2.storageKey]).size,4);
  const perfect=Object.fromEntries(qs.map(q=>[q.id,q.key]));assert.equal(englishPracticeResult(qs,perfect).correct,10);assert.equal(englishPracticeResult(qs,perfect).percent,100);
  const mixed=englishPracticeResult(qs,{1:'A',2:'F'});assert.equal(mixed.correct,1);assert.equal(mixed.incorrect,1);assert.equal(mixed.unanswered,8);

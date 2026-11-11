@@ -1,0 +1,22 @@
+[
+  {
+    "file": "figure-1-source.png",
+    "sha256": "2ed20e9c2831b36a35e0d6bb3be204fef1486bc22126856c34279fce9aab983d"
+  },
+  {
+    "file": "figure-2-source.png",
+    "sha256": "771918f6416a285913c278aeb1ba80cfb7868dd0ce8cd5609423fc2933f01b3d"
+  },
+  {
+    "file": "figure-3-source.png",
+    "sha256": "e8620e2a3a383f93a900031bf5d63b7e265406968f51525569ba54bfd1e0d5be"
+  },
+  {
+    "file": "figure-4-source.png",
+    "sha256": "0eb09af1b6c1a43f20ca9e3cd6c8b02d8d7bcd315e43eee8d68cbfea92a90bcb"
+  },
+  {
+    "file": "question-1-source.png",
+    "sha256": "d734560b00323d40b488c30ce0cd2b8db66efddd92bca7d1acb3be0f22d1352c"
+  }
+]

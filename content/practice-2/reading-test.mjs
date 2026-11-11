@@ -5,7 +5,7 @@ import {readingLecture,readingLectureRu} from './reading-lecture.mjs';
 export const readingTest={
  id:'practice-2-reading',title:'Practice 2',sectionLabel:'Reading',storageKey:'act-space-practice-2-reading-v1',
  passage:readingPassage,questions:readingQuestions,lecture:readingLecture,lectureRu:readingLectureRu,evidenceRu:readingEvidenceRu,
- nav:[{label:'English',href:'/lessons/practice-2'},{label:'Mathematics',href:'/lessons/practice-2/math'},{label:'Reading',current:true},{label:'Science',disabled:true}],
+ nav:[{label:'English',href:'/lessons/practice-2'},{label:'Mathematics',href:'/lessons/practice-2/math'},{label:'Reading',current:true},{label:'Science',href:'/lessons/practice-2/science'}],
  instructions:'Read the complete passage, then answer Questions 1–10 using what the author states or supports. Source-line ranges are shown above the paragraphs. In EXCEPT questions, choose the one option that does not fit. Odd questions use A–D; even questions use F, G, H, J.',
  introNote:'Reading belongs to Practice 2. English and Reading answers are saved separately in this browser. After checking, open the evidence, Russian support, and reading-skills lecture.',
  lectureTitle:'Мини-лекция: как читать и доказывать ответ',
