@@ -12,7 +12,7 @@ export const englishTest = {
     { label: 'English', current: true },
     { label: 'Mathematics', href: '/lessons/practice-3/math' },
     { label: 'Reading', href: '/lessons/practice-3/reading' },
-    { label: 'Science', disabled: true },
+    { label: 'Science', href: '/lessons/practice-3/science' },
   ],
   passage,
   questions,

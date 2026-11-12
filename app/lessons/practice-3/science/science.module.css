@@ -1,0 +1,65 @@
+.anchor, .cell, .layer { scroll-margin-top: 32px; }
+.anchor:target { outline: 2px solid #d3a9e4; outline-offset: 5px; }
+.cell:target { background: #f6db86; color: #33203c; font-weight: 700; }
+.fieldset { min-width: 0; }
+
+.viewpoint { margin-top: 24px; }
+.viewpoint h3 { margin-bottom: 7px; }
+.viewpoint p, .measurement p { font-size: 14px; line-height: 1.9; max-width: 900px; }
+.viewpoint p + p { margin-top: 10px; }
+.measurement + .measurement { margin-top: 24px; }
+.tableCard { margin-top: 12px; max-width: 760px; }
+.table { table-layout: fixed; }
+.table th, .table td { white-space: normal; text-align: center; }
+.table thead th { white-space: normal; overflow-wrap: anywhere; }
+.table th:first-child { width: 13%; }
+.table caption { color: #553461; font-weight: 650; }
+
+.atmosphere { max-width: 490px; margin: 22px 0; }
+.atmosphere text { fill: #362742; font-size: 17px; }
+.layer path { stroke: #735e7e; stroke-width: 1.5; fill: none; }
+.bandLabel { fill: transparent; }
+.layer:target .bandLabel { fill: #f6db86; }
+.layer:target path { stroke: #82509b; stroke-width: 3; }
+.layer:target text { font-weight: 700; }
+
+.growth { max-width: 540px; margin: 18px 0; }
+.growth text { fill: #362742; font-size: 16px; }
+.fitLine { stroke: #88569d; stroke-width: 3; fill: none; }
+.point { fill: #4f3760; stroke: #fffdfa; stroke-width: 1; }
+
+.sources { display: grid; gap: 5px; list-style: none; padding: 0 !important; margin: 10px 0 18px !important; }
+.sourceRef { position: relative; margin: 0 !important; padding-left: 0 !important; }
+.sourceRef a { display: inline-block; padding: 3px 0; color: #714086; text-decoration: underline; text-underline-offset: 3px; }
+.sourceRef a:focus-visible { outline: 2px solid #9563ac; outline-offset: 3px; border-radius: 2px; }
+.preview {
+  position: absolute;
+  z-index: 2;
+  inset: 100% 0 auto;
+  width: max-content;
+  max-width: min(100%, 490px);
+  visibility: hidden;
+  opacity: 0;
+  padding: 9px 12px;
+  border: 1px solid #d6b9e4;
+  border-radius: 8px;
+  background: #f4e7fa;
+  color: #382544;
+  font-size: 12px;
+  line-height: 1.55;
+  box-shadow: 0 5px 18px #43265226;
+  pointer-events: none;
+}
+.sourceRef:hover .preview, .sourceRef:focus-within .preview { visibility: visible; opacity: 1; }
+
+.vocabulary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.vocabulary > div { background: #fffdfa; border: 1px solid #e6d8eb; border-radius: 10px; padding: 12px; min-width: 0; }
+.vocabulary dt { font-weight: 700; color: #714086; }
+.vocabulary dd { margin: 5px 0 0; font-size: 13px; line-height: 1.6; }
+
+@media (max-width: 650px) {
+  .table th, .table td { padding: 8px 4px; }
+  .table thead th { font-size: 11px; }
+  .viewpoint p, .measurement p { font-size: 13px; }
+  .vocabulary { grid-template-columns: 1fr; }
+}

@@ -13,7 +13,7 @@ const test = {
     { label: 'English', href: '/lessons/practice-3' },
     { label: 'Mathematics', current: true },
     { label: 'Reading', href: '/lessons/practice-3/reading' },
-    { label: 'Science' },
+    { label: 'Science', href: '/lessons/practice-3/science' },
   ],
   instructions: 'Choose one answer per question. Odd questions use A–E. Even questions use F, G, H, J, K. Use the labels and relationships shown in the diagrams.',
   intro: 'После проверки под каждым заданием откроется решение на русском. Ответы сохраняются отдельно для этой секции.',
