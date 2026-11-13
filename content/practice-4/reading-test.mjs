@@ -15,7 +15,7 @@ export const readingTest = {
   lectureRu: readingLectureRu,
   readingNotebook,
   nav: [
-    { label: 'English', disabled: true },
+    { label: 'English', href: '/lessons/practice-4' },
     { label: 'Mathematics', disabled: true },
     { label: 'Reading', current: true },
     { label: 'Science', disabled: true },
