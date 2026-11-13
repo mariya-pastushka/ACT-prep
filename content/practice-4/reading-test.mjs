@@ -18,7 +18,7 @@ export const readingTest = {
     { label: 'English', href: '/lessons/practice-4' },
     { label: 'Mathematics', href: '/lessons/practice-4/math' },
     { label: 'Reading', current: true },
-    { label: 'Science', disabled: true },
+    { label: 'Science', href: '/lessons/practice-4/science' },
   ],
   instructions: 'Read the passage and answer Questions 1–10. Line references match the supplied passage even when the text wraps differently on your screen.',
   lectureTitle: 'Мини-лекция: как находить доказательства в Reading',

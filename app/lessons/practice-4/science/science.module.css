@@ -1,0 +1,116 @@
+.passageTitle {
+  margin-bottom: 14px;
+}
+
+.passageText {
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 900px;
+}
+
+.setup {
+  margin-top: 20px;
+}
+
+.figure {
+  max-width: 535px;
+  margin: 20px 0;
+}
+
+.figure svg {
+  color: #362742;
+  font-size: 14px;
+}
+
+.figure text {
+  fill: currentColor;
+}
+
+.plotGrid {
+  stroke: #b4a4bf;
+  stroke-width: 0.85;
+}
+
+.plotLine {
+  fill: none;
+  stroke: #49325a;
+  stroke-width: 2.5;
+}
+
+.figureOutline,
+.cylinder {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.cylinder {
+  display: block;
+  width: 100%;
+  max-width: 132px;
+  height: auto;
+  margin-inline: auto;
+  color: #49325a;
+}
+
+.cylinderChoices {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cylinderChoice {
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.cylinderChoice input,
+.cylinderChoice b {
+  margin-top: 4px;
+}
+
+.cylinderChoice span {
+  flex: 1;
+  min-width: 0;
+}
+
+.statements {
+  margin: -2px 0 16px;
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.tableCard {
+  margin: 15px 0 23px;
+  max-width: 770px;
+}
+
+.tableCard .table {
+  table-layout: auto;
+}
+
+.tableCard th:first-child {
+  width: auto;
+}
+
+.tableCard tr:target > * {
+  background: #f6db86;
+  color: #33203c;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .passageText {
+    font-size: 13px;
+  }
+
+  .tableCard {
+    padding-inline: 6px;
+  }
+
+  .tableCard th,
+  .tableCard td {
+    padding-inline: 4px;
+  }
+}
