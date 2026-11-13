@@ -9,7 +9,7 @@ export const englishTest = {
   storageKey: 'act-space-practice-4-english-v1',
   nav: [
     { label: 'English', current: true },
-    { label: 'Mathematics', disabled: true },
+    { label: 'Mathematics', href: '/lessons/practice-4/math' },
     { label: 'Reading', href: '/lessons/practice-4/reading' },
     { label: 'Science', disabled: true },
   ],

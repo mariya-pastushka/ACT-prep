@@ -12,6 +12,13 @@ function Part({node}){
   case 'root':return <msqrt><Part node={node.value}/></msqrt>;
   case 'sub':return <msub><Part node={node.base}/><Part node={node.index}/></msub>;
   case 'words':return <mtext>{node.value}</mtext>;
+  case 'matrix':return <mrow>
+   <mo fence="true">[</mo>
+   <mtable>{node.rows.map((cells,i)=><mtr key={i}>{cells.map((cell,j)=>
+    <mtd key={j}><Part node={cell}/></mtd>
+   )}</mtr>)}</mtable>
+   <mo fence="true">]</mo>
+  </mrow>;
   default:return null;
  }
 }
