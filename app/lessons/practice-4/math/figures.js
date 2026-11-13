@@ -40,21 +40,22 @@ function Trapezoid({ solved }) {
 }
 
 function Accounts({ solved }) {
-  const valueY = value => 245 - value * 13.8;
+  const baseline = 310;
+  const valueY = value => baseline - value * 18;
   return <>
-    <svg viewBox="0 0 570 285" role="img" aria-label={accountCounts.map(([name, count]) => `${name}: ${count}`).join(', ')}>
-      {[5, 10, 15].map(value => <path key={value} d={`M43 ${valueY(value)}H558`} className={base.grid}/>)}
-      <path d="M43 36V245H558" className={base.axis}/>
+    <svg viewBox="0 0 620 354" role="img" aria-label={accountCounts.map(([name, count]) => `${name}: ${count}`).join(', ')}>
+      {[5, 10, 15].map(value => <path key={value} d={`M43 ${valueY(value)}H602`} className={base.grid}/>)}
+      <path d={`M43 ${valueY(15)}V${baseline}H602`} fill="none" className={base.axis}/>
       {Array.from({ length: 15 }, (_, i) => i + 1).map(value => <g key={value}>
         <path d={`M36 ${valueY(value)}H43`} className={base.axis}/>
-        <text x="30" y={valueY(value) + 5} textAnchor="end" className={css.tick}>{value}</text>
+        <text x="28" y={valueY(value) + 4.5} textAnchor="end" className={css.accountTick}>{value}</text>
       </g>)}
       {accountCounts.map(([name, count], i) => {
-        const x = 77 + i * 64;
+        const x = 78 + i * 70;
         return <g key={name}>
-          <rect x={x - 13} y={valueY(count)} width="26" height={245 - valueY(count)} className={solved && (count === 10 || count === 11) ? css.middleBar : css.bar}/>
-          <text x={x} y="270" textAnchor="middle" className={css.tick}>{name}</text>
-          {solved && <text x={x} y={valueY(count) - 7} textAnchor="middle" className={css.tick}>{count}</text>}
+          <rect x={x - 14} y={valueY(count)} width="28" height={baseline - valueY(count)} className={solved && (count === 10 || count === 11) ? css.middleBar : css.bar}/>
+          <text x={x} y="335" textAnchor="middle" className={css.accountLabel}>{name}</text>
+          {solved && <text x={x} y={valueY(count) - 8} textAnchor="middle" className={css.accountLabel}>{count}</text>}
         </g>;
       })}
     </svg>
@@ -163,8 +164,9 @@ const diagrams = {
 export default function MathFigure({ type, solved = false }) {
   if (Object.hasOwn(taxPaths, type)) return <Tax type={type}/>;
   const Diagram = diagrams[type];
-  const wide = type === 'accounts' || type === 'sine' || type === 'sign-line';
-  return <figure className={`${base.figure} ${wide ? css.wide : base.practiceDiagram}`}>
+  const layout = type === 'accounts' ? css.accounts
+    : type === 'sine' || type === 'sign-line' ? css.wide : base.practiceDiagram;
+  return <figure className={`${base.figure} ${layout}`}>
     {type === 'tax-solution' ? <Tax type="tax-b" solved/> : <Diagram solved={solved}/>}
   </figure>;
 }

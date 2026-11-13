@@ -7,6 +7,15 @@
 .polygon { fill: #eee4f5; stroke: #43334e; stroke-width: 1.8; }
 .wide { max-width: 660px; }
 .wide svg .tick { font-size: 19px; }
+.accounts { max-width: 780px; }
+.accounts svg { max-width: 740px; }
+.accounts svg .accountTick { font-size: 13px; }
+.accounts svg .accountLabel { font-size: 15px; }
+
+@media (max-width: 480px) {
+  .accounts svg .accountTick { font-size: 15px; }
+  .accounts svg .accountLabel { font-size: 17px; }
+}
 
 .data { margin-top: 12px; font-size: 13px; color: #68447b; }
 .data summary { cursor: pointer; }
