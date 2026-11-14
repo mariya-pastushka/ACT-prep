@@ -4,4 +4,5 @@ export default function Lessons(){return <div lang="en" className="wrap"><header
 <div style={{marginTop:32}}><Link href="/lessons/practice-3" className="button yellow">Practice 3 <span>↗︎</span></Link><p style={{fontSize:12,color:"#87738f",marginTop:18}}>English + Mathematics + Reading + Science · 53 questions</p></div>
 <div style={{marginTop:32}}><Link href="/lessons/practice-4" className="button yellow">Practice 4 <span>↗︎</span></Link><p style={{fontSize:12,color:"#87738f",marginTop:18}}>English + Mathematics + Reading + Science · 51 questions</p></div>
 <div style={{marginTop:32}}><Link href="/lessons/practice-5/math" className="button yellow">Practice 5 <span>↗︎</span></Link><p style={{fontSize:12,color:"#87738f",marginTop:18}}>Mathematics · 15 questions</p></div>
+<div style={{marginTop:32}}><Link href="/lessons/practice-6/math" className="button yellow">Practice 6 <span>↗︎</span></Link><p style={{fontSize:12,color:"#87738f",marginTop:18}}>Mathematics · 15 questions</p></div>
 </main><footer style={{padding:'20px 0',fontSize:12}}>Created by <a href="https://t.me/disamura">Диас Муратов · @disamura ↗︎</a></footer></div>}

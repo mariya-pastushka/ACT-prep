@@ -1,0 +1,10 @@
+import Practice6Math from './math-practice';
+
+export const metadata = {
+  title: 'Practice 6 · Mathematics · ACT space',
+  description: '15 ACT Mathematics questions with diagrams and step-by-step Russian solutions.',
+};
+
+export default function Page() {
+  return <Practice6Math/>;
+}
