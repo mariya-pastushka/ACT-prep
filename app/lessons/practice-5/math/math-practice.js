@@ -9,7 +9,7 @@ const test = {
   id: 'math-5',
   storageKey: mathStorageKey,
   questions: mathQuestions,
-  nav: [{ label: 'Mathematics', current: true }],
+  nav: [{ label: 'English', href: '/lessons/practice-5' }, { label: 'Mathematics', current: true }],
   instructions: 'Choose one answer per question. Use the marked values and relationships in each figure.',
   intro: 'После проверки под каждым заданием откроется пошаговое решение на русском.',
 };
