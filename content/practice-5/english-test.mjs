@@ -10,6 +10,7 @@ export const englishTest = {
   nav: [
     { label: 'English', current: true },
     { label: 'Mathematics', href: '/lessons/practice-5/math' },
+    { label: 'Reading', href: '/lessons/practice-5/reading' },
   ],
   passage,
   questions,
