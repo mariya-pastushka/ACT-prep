@@ -1,0 +1,176 @@
+.passage .sourceParagraph {
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.lineNumber,
+.lineText {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .passage .sourceParagraph {
+    font-size: .9375rem;
+    line-height: 1.9;
+  }
+}
+
+@media (min-width: 740px) {
+  main.wide,
+  header.wide {
+    width: min(1320px, calc(100% - 32px));
+  }
+
+  header.header {
+    height: 4rem;
+  }
+
+  .frame {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 38rem;
+    block-size: calc(100svh - 5rem);
+  }
+
+  .intro {
+    flex: none;
+  }
+
+  .intro .masthead {
+    padding: .75rem 1.1rem;
+  }
+
+  .intro .masthead h1 {
+    font-size: 1.9rem;
+    margin: .2rem 0;
+    letter-spacing: -.04em;
+  }
+
+  .intro .masthead > p {
+    margin: .25rem 0;
+    font-size: .92rem;
+  }
+
+  .intro .stages {
+    margin: .7rem 0;
+  }
+
+  .intro > p {
+    margin: .65rem 0;
+    font-size: .82rem;
+  }
+
+  .intro .result {
+    margin: .65rem 0;
+    padding: .55rem .85rem;
+  }
+
+  .workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    flex: 1 1 auto;
+    min-block-size: 19rem;
+    gap: clamp(.75rem, 1.6vw, 1.5rem);
+  }
+
+  .pane {
+    min-inline-size: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-gutter: stable;
+    scroll-padding-block: .8rem;
+    border: 1px solid #e3d7e9;
+    border-radius: .9rem;
+  }
+
+  .pane:focus-visible {
+    outline: 2px solid #9262af;
+    outline-offset: 2px;
+  }
+
+  .pane .passage {
+    container-type: inline-size;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: clamp(.8rem, 1.65vw, 1.6rem);
+  }
+
+  .passage h2 {
+    font-size: clamp(1.45rem, 2.3vw, 2rem);
+    letter-spacing: -.04em;
+    margin: 0;
+  }
+
+  .passagePane {
+    background: white;
+  }
+
+  .mobileRange,
+  .mobileText {
+    display: none;
+  }
+
+  .passage .sourceParagraph {
+    margin-block: .9em;
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: clamp(.8rem, 3.4cqi, 1.1rem);
+    line-height: 1.48;
+  }
+
+  .sourceParagraph .sourceRow {
+    display: grid;
+    grid-template-columns: 2ch minmax(0, 1fr);
+    column-gap: .65em;
+    scroll-margin-block-start: .2rem;
+  }
+
+  .lineNumber {
+    display: block;
+    color: #695771;
+    font-family: 'Golos Text', Arial, sans-serif;
+    font-size: .68em;
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+    align-self: start;
+    padding-block-start: .28em;
+  }
+
+  .lineText {
+    display: block;
+  }
+
+  .sourceRow:first-child .lineText {
+    text-indent: 1.5em;
+  }
+
+  .questionsPane {
+    padding: clamp(.65rem, 1.2vw, 1.1rem);
+    background: var(--paper);
+  }
+
+  .questionsPane > section > article {
+    padding: clamp(.7rem, 1.45vw, 1.3rem);
+  }
+
+  .questionsPane > section > article:first-child {
+    margin-top: 0;
+  }
+
+  .questionsPane legend {
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+}
+
+@media (740px <= width < 1000px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1.56fr) minmax(0, 1fr);
+  }
+
+  .questionsPane label {
+    padding: .6rem .7rem;
+    gap: .5rem;
+  }
+}

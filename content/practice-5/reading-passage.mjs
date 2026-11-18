@@ -117,6 +117,7 @@ const lineGroups = paragraphs.map(lines => lines.map((raw, index) => {
   const splitWord = raw.endsWith('-');
   return {
     number: ++number,
+    printedText: raw,
     text: splitWord ? raw.slice(0, -1) : raw,
     joinAfter: splitWord || index === lines.length - 1 ? '' : ' ',
   };
@@ -125,7 +126,7 @@ const lineGroups = paragraphs.map(lines => lines.map((raw, index) => {
 export const readingPassage = {
   title: 'The Year of the Unicorn',
   attribution: 'PROSE FICTION: The following passage is excerpted from the coming-of-age novel The Year of the Unicorn by Krista Prouty (© 2008 by Krista Prouty).',
-  source: 'The passage and answer key were transcribed from the supplied screenshots. Words split by printed line breaks are joined.',
+  source: 'The passage, line breaks, and answer key follow the supplied screenshots.',
   sourceLines: lineGroups.flat(),
   lineRanges: lineGroups.map(lines => ({ from: lines[0].number, to: lines.at(-1).number })),
   paragraphs: lineGroups.map(lines => lines.map(line => line.text + line.joinAfter).join('')),

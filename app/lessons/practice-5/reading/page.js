@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <EnglishPractice key={readingTest.id} test={readingTest} />;
+  return <EnglishPractice key={readingTest.id} test={readingTest} splitReading />;
 }
