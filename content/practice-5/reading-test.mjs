@@ -18,6 +18,7 @@ export const readingTest = {
     { label: 'English', href: '/lessons/practice-5' },
     { label: 'Mathematics', href: '/lessons/practice-5/math' },
     { label: 'Reading', current: true },
+    { label: 'Science', href: '/lessons/practice-5/science' },
   ],
   instructions: 'Read the passage and answer Questions 1–10. Line numbers match the supplied passage. In Question 1, choose the reaction the passage does NOT support.',
   lectureTitle: 'Мини-конспект по ACT Reading',

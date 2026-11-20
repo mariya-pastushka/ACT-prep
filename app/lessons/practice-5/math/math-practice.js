@@ -13,6 +13,7 @@ const test = {
     { label: 'English', href: '/lessons/practice-5' },
     { label: 'Mathematics', current: true },
     { label: 'Reading', href: '/lessons/practice-5/reading' },
+    { label: 'Science', href: '/lessons/practice-5/science' },
   ],
   instructions: 'Choose one answer per question. Use the marked values and relationships in each figure.',
   intro: 'После проверки под каждым заданием откроется пошаговое решение на русском.',

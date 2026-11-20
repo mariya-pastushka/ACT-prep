@@ -1,0 +1,139 @@
+.passageTitle {
+  margin-bottom: 14px;
+}
+
+.passageText {
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 920px;
+}
+
+.setup {
+  margin-top: 26px;
+}
+
+.tableCard {
+  margin: 18px 0 24px;
+  max-width: 810px;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.tableScroll:focus-visible {
+  outline: 2px solid #9262af;
+  outline-offset: 3px;
+}
+
+.tableCard .table {
+  table-layout: auto;
+}
+
+.tableCard .table th {
+  white-space: normal;
+}
+
+.tableCard .table th:first-child {
+  width: 26%;
+}
+
+.tableCard tr:target > * {
+  background: #f6db86;
+  color: #33203c;
+  font-weight: 700;
+}
+
+.structureCard {
+  max-width: none;
+}
+
+.structureCard .structureTable {
+  min-width: 940px;
+  table-layout: fixed;
+}
+
+.structureCard .structureTable th:first-child {
+  width: 70px;
+}
+
+.structureCard .structureTable th:nth-child(2) {
+  width: 75px;
+}
+
+.structureTable td {
+  white-space: normal;
+  vertical-align: middle;
+}
+
+.structureTable th small {
+  display: block;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.molecule {
+  margin: 0;
+  text-align: center;
+}
+
+.molecule svg {
+  display: block;
+  width: 100%;
+  height: 92px;
+  color: #30253d;
+  overflow: visible;
+}
+
+.molecule svg line {
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.molecule svg text {
+  fill: currentColor;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.functionalGroup {
+  color: #86559a;
+}
+
+.molecule figcaption {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.molecule figcaption span {
+  display: block;
+  color: #695771;
+}
+
+.formula {
+  padding: 15px;
+  margin: 16px 0;
+  overflow-x: auto;
+  background: #eee3f5;
+  border-radius: 10px;
+}
+
+.formula math {
+  font-size: 1.15rem;
+  margin-block: 8px;
+}
+
+@media (max-width: 650px) {
+  .passageText {
+    font-size: 13px;
+  }
+
+  .tableCard {
+    padding-inline: 8px;
+  }
+
+  .tableCard th,
+  .tableCard td {
+    padding-inline: 6px;
+  }
+}
