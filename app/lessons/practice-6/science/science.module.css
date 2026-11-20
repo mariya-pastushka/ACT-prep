@@ -1,0 +1,131 @@
+.passageText {
+  font-size: 14px;
+  line-height: 1.95;
+  max-width: 930px;
+}
+
+.hypothesis, .experiment {
+  margin-top: 28px;
+}
+
+.diagram {
+  max-width: 540px;
+  margin: 24px 0;
+  background: #faf7fc;
+  border: 1px solid #e7ddeb;
+  border-radius: 14px;
+  padding: 22px;
+  scroll-margin-top: 24px;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #45334f;
+  font-family: Arial, sans-serif;
+}
+
+.diagram svg text {
+  fill: currentColor;
+  font-size: 18px;
+}
+
+.diagram .sketch, .diagram .genome, .diagram .leader {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.diagram .genome {
+  color: #9567ab;
+  stroke-width: 2.2;
+}
+
+.diagram .leader {
+  stroke-width: 1.2;
+}
+
+.diagram figcaption {
+  border-top: 1px solid #e7ddeb;
+  padding-top: 14px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.diagram:target {
+  outline: 2px solid #d7b5e6;
+  outline-offset: 5px;
+}
+
+.tableCard {
+  max-width: 850px;
+  margin: 20px 0;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.tableScroll:focus-visible {
+  outline: 2px solid #9262af;
+  outline-offset: 3px;
+}
+
+.tableCard th {
+  white-space: normal;
+}
+
+.tableCard th:not(:first-child), .tableCard td {
+  text-align: center;
+}
+
+.tableCard tr:target > * {
+  background: #f6db86;
+  color: #33203c;
+  font-weight: 700;
+}
+
+.tableCard .tableHint {
+  font-size: 12px;
+  color: #766181;
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+.prediction {
+  margin: 18px 0;
+  max-width: 850px;
+  padding: 18px;
+  background: #f6eff9;
+  border: 1px solid #e3d6eb;
+  border-radius: 13px;
+}
+
+.prediction table {
+  min-width: 390px;
+}
+
+.formula {
+  padding: 18px 10px;
+  overflow-x: auto;
+}
+
+.formula math {
+  font-size: 1.1rem;
+  margin-block: 10px;
+}
+
+@media (max-width: 650px) {
+  .passageText { font-size: 13px; }
+  .diagram { padding: 14px 8px; }
+  .diagram svg text { font-size: 20px; }
+  .diagram figcaption { padding-inline: 8px; font-size: 12px; }
+  .tableCard { padding-inline: 8px; }
+  .tableCard th, .tableCard td { padding: 10px 6px; }
+  .tableCard table { min-width: 280px; }
+  .prediction { padding-inline: 10px; }
+  .formula math { font-size: 1rem; }
+}

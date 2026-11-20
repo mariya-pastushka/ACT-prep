@@ -18,6 +18,7 @@ export const readingTest = {
     { label: 'English', href: '/lessons/practice-6' },
     { label: 'Mathematics', href: '/lessons/practice-6/math' },
     { label: 'Reading', current: true },
+    { label: 'Science', href: '/lessons/practice-6/science' },
   ],
   instructions: 'Read the passage and answer Questions 1–10. Line numbers match the supplied passage. Select a line reference in the review to find the evidence.',
   lectureTitle: 'Мини-конспект по ACT Reading',
