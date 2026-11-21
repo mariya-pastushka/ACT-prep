@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import {useEffect,useState} from 'react';
-import {englishPracticeResult,restoreEnglishAttempt} from '../../lib/english-practice.mjs';
+import {englishPracticeResult,restoreEnglishAttempt,isAnswerCorrect} from '../../lib/english-practice.mjs';
 import {Blocks,RichText} from './practice-2/math/notation';
 import styles from './trial/trial.module.css';
 import shared from './practice-1/practice.module.css';
@@ -51,14 +51,14 @@ export default function MathPractice({test, MathFigure}){
       <div className={q.choices[0].figure ? css.graphChoices : styles.choices}>
        {q.choices.map(c=><label key={c.label} className={[
         styles.choice, c.figure && css.graphChoice, data.answers[q.id]===c.label && styles.selected,
-        data.submitted && c.label===q.key && styles.correct,
+        data.submitted && isAnswerCorrect(q,c.label) && styles.correct,
        ].filter(Boolean).join(" ")}>
        <input type="radio" name={storageKey+"-"+q.id} aria-label={c.figure?c.label+". "+c.description:undefined} checked={data.answers[q.id]===c.label} onChange={()=>setData(d=>({...d,answers:{...d.answers,[q.id]:c.label}}))}/><b>{c.label}.</b>{c.figure?<MathFigure type={c.figure}/>:<span className={css.choiceText}><RichText content={c.content}/></span>}
       </label>)}</div>
      </fieldset>
      {!data.submitted&&data.answers[q.id]&&<button className={styles.smallButton} onClick={()=>setData(d=>{const answers={...d.answers};delete answers[q.id];return {...d,answers}})}>Clear answer</button>}
      {data.submitted&&<div className={`${styles.review} ${shared.ruSupport}`} lang="ru">
-      <p><strong>{data.answers[q.id]===q.key?'✓ Верно':data.answers[q.id]?'✕ Ошибка':'— Нет ответа'}</strong> · Твой ответ: {data.answers[q.id]||'—'} · Верный ответ: {q.key}</p><span className={styles.tag}>{q.topic}</span>
+      <p><strong>{isAnswerCorrect(q,data.answers[q.id])?'✓ Верно':data.answers[q.id]?'✕ Ошибка':'— Нет ответа'}</strong> · Твой ответ: {data.answers[q.id]||'—'} · Верный ответ: {q.key}{q.acceptedKeys?.some(label=>label!==q.key)&&<> · Также принимается: {q.acceptedKeys.filter(label=>label!==q.key).join(', ')}</>}</p><span className={styles.tag}>{q.topic}</span>
       <details className={styles.solution}><summary>Почему {q.key}? Понятное решение по шагам</summary>
        <h4>Что дано и что нужно найти</h4><Blocks content={q.given}/>
        <h4>Какое правило используем</h4><Blocks content={q.rule}/>

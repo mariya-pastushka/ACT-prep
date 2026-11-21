@@ -16,6 +16,7 @@ export const readingTest = {
   readingNotebook,
   nav: [
     { label: 'English', href: '/lessons/practice-7' },
+    { label: 'Mathematics', href: '/lessons/practice-7/math' },
     { label: 'Reading', current: true },
   ],
   instructions: 'Read the passage and answer Questions 1–10. Line numbers match the supplied screenshots. Questions 2, 5, and 6 ask for the choice that is NOT answered or is an EXCEPTION.',

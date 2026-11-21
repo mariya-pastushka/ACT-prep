@@ -6,6 +6,7 @@ export const root=value=>({kind:'root',value});
 export const sub=(base,index)=>({kind:'sub',base,index});
 export const words=value=>({kind:'words',value});
 export const matrix=(...rows)=>({kind:'matrix',rows});
+export const aligned=(...rows)=>({kind:'aligned',rows});
 export function mathLabel(node){
  if(typeof node==='string'||typeof node==='number')return String(node);
  switch(node.kind){
@@ -16,6 +17,7 @@ export function mathLabel(node){
   case 'sub':return `${mathLabel(node.base)} base ${mathLabel(node.index)}`;
   case 'words':return node.value;
   case 'matrix':return node.rows.map(cells=>cells.map(mathLabel).join(', ')).join(' / ');
+  case 'aligned':return node.rows.map(cells=>cells.map(mathLabel).join(' ')).join(' ');
   default:throw new Error('Unknown math node');
  }
 }
