@@ -1,0 +1,11 @@
+.screen { min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: #f5eff8; }
+.card { width: 100%; max-width: 420px; padding: 36px; border: 1px solid #e2d5e9; border-radius: 24px; background: #fffdfa; box-shadow: 0 12px 45px #4830520a; }
+.brand { color: #9567ab; font-size: 22px; font-weight: 700; }
+.card h1 { margin: 25px 0 12px; font-size: 30px; }
+.card p { line-height: 1.7; color: #766181; }
+.card label { display: block; margin: 24px 0 8px; font-size: 14px; }
+.card input { box-sizing: border-box; width: 100%; padding: 14px; border: 1px solid #cdb8d9; border-radius: 10px; background: white; font: inherit; }
+.card input:focus-visible { outline: 3px solid #d9c3e5; outline-offset: 2px; }
+.card button { margin-top: 20px; width: 100%; padding: 14px; border: 0; border-radius: 10px; background: #f6dc7d; color: #30243b; font: inherit; cursor: pointer; font-weight: 600; }
+.card .error { color: #a13043; font-size: 13px; }
+@media(max-width: 480px) { .card { padding: 26px; } }
