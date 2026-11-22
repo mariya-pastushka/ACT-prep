@@ -1,0 +1,15 @@
+.protected {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.protected input, .protected textarea, .protected [contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+@media print {
+  .protected { display: none !important; }
+}
