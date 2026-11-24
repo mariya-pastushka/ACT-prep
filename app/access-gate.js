@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import styles from './access-gate.module.css';
 
-const password = '221126';
-const storageKey = 'act-space-access-221126';
+const password = '272727';
+const storageKey = 'act-space-access-272727';
 
 export default function AccessGate({ children }) {
   const [unlocked, setUnlocked] = useState(false);
