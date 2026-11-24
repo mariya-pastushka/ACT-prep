@@ -15,6 +15,7 @@ export const readingTest = {
   lectureRu: readingLectureRu,
   readingNotebook,
   nav: [
+    { label: 'English', href: '/lessons/practice-8' },
     { label: 'Reading', current: true },
   ],
   instructions: 'Read the passage and answer Questions 1–10. Line numbers match the supplied screenshots. Select a line reference in the review to find the evidence.',
