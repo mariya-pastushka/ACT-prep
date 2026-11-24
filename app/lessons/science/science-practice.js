@@ -48,7 +48,7 @@ function Explanation({ question, Figure }) {
   </details>;
 }
 
-function ScienceNotebook({ lectureId, questionId, lecture, vocabulary, children }) {
+function ScienceNotebook({ lectureId, questionId, lecture, vocabulary, vocabularyTitle, children }) {
   return <section id={lectureId} className={`${shared.lecture} ${css.anchor}`} lang="ru">
     <h2>Мини-лекция по Science</h2>
     {lecture.map(lesson => <article key={lesson.title} className={`${styles.rubric} ${shared.ruSupport}`}>
@@ -66,7 +66,7 @@ function ScienceNotebook({ lectureId, questionId, lecture, vocabulary, children 
       </details>
     </article>)}
     <article className={`${styles.strategy} ${shared.ruSupport}`}>
-      <h3>Словарь к двум текстам</h3>
+      <h3>{vocabularyTitle}</h3>
       <dl className={css.vocabulary}>
         {vocabulary.map(([term, en, ru]) => <div key={term}>
           <dt lang="en">{term}</dt><dd lang="en">{en}</dd><dd>{ru}</dd>
@@ -79,7 +79,8 @@ function ScienceNotebook({ lectureId, questionId, lecture, vocabulary, children 
 
 export default function SciencePractice({
   practiceNumber, subtitle, storageKey, groups, questions, lecture, vocabulary,
-  reviewFigures, choiceLayouts, QuestionExtras, children,
+  reviewFigures, choiceLayouts, QuestionExtras, children, navigation,
+  vocabularyTitle = 'Словарь к двум текстам',
 }) {
   const practiceTitle = `Practice ${practiceNumber}`;
   const practicePath = `/lessons/practice-${practiceNumber}`;
@@ -137,9 +138,7 @@ export default function SciencePractice({
         <span className={styles.tag}>{total} questions · English and Russian explanations</span>
       </div>
       <nav className={styles.stages} aria-label="Practice sections">
-        <Link className="nav-cta" href={practicePath}>English</Link>
-        <Link className="nav-cta" href={`${practicePath}/math`}>Mathematics</Link>
-        <Link className="nav-cta" href={`${practicePath}/reading`}>Reading</Link>
+        {(navigation ?? [{label:'English',href:practicePath},{label:'Mathematics',href:`${practicePath}/math`},{label:'Reading',href:`${practicePath}/reading`}]).map(item=><Link key={item.label} className="nav-cta" href={item.href}>{item.label}</Link>)}
         <button type="button" aria-current="page">Science</button>
       </nav>
       <p className={base.instruction}>Read each passage and choose one answer per question. After checking, hover or focus an evidence link to preview it, or select it to jump to the source.</p>
@@ -203,7 +202,7 @@ export default function SciencePractice({
           <button onClick={() => finish(true)}>Clear and retry</button><button onClick={() => setConfirmation('')}>Cancel</button>
         </div>}
       </div>
-      {attempt.submitted ? <ScienceNotebook lectureId={lectureId} questionId={questionId} lecture={lecture} vocabulary={vocabulary}>
+      {attempt.submitted ? <ScienceNotebook lectureId={lectureId} questionId={questionId} lecture={lecture} vocabulary={vocabulary} vocabularyTitle={vocabularyTitle}>
         {children}
       </ScienceNotebook> : <p className={styles.notice}>Explanations, the mini-lecture, and vocabulary open after checking.</p>}
       <footer className={styles.footer}>{practiceTitle} · Science · <a href="https://t.me/disamura">Диас Муратов · @disamura ↗︎</a></footer>
