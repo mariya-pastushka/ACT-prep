@@ -1,0 +1,12 @@
+.diagram { max-width: 580px; }
+.diagram .canvas { max-width: 530px; }
+.diagram .canvas text { font-size: 20px; }
+.diagram .canvas .minor { font-size: 17px; }
+.diagram .canvas .accent { fill: #865399; font-weight: 600; }
+@media (max-width: 650px) {
+  .diagram .canvas text { font-size: 24px; }
+  .diagram .canvas .minor { font-size: 21px; }
+  .diagram .angles text { font-size: 28px; }
+  .diagram .angles .angleValue { font-size: 30px; }
+  .diagram .angles .angleSum { font-size: 24px; }
+}
