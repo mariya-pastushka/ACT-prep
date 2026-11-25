@@ -1,4 +1,5 @@
-export const scienceStorageKey='act-space-practice-8-science-v1';
+export const sciencePreviousStorageKey='act-space-practice-8-science-v1';
+export const scienceStorageKey='act-space-practice-8-science-v2';
 export const introduction='A study was conducted regarding the fossil shells of a particular species of turtle that lives off the coast of the Opulasian Peninsula. Scientists discovered a continuous record of fossilized shells in the seabed off the coast dating back 120,000 years. In addition to examining the fossilized turtle shells, the scientists also examined the shells of living turtles.';
 export const sampling='From each layer of seabed, the scientists randomly selected five complete, unbroken fossilized shells. Each shell was carefully prepared, measured, and photographed. A bit of each shell was then clipped off and sent to a laboratory for radiocarbon dating to determine the precise age of each shell.';
 export const study1='All of the living turtles had a distinct band of hexagonal scutes (bony plates) running the length of their shells, from head to tail. The fossilized shells’ scutes were not visible to the naked eye; however upon application of a particular dye, a similar band of scutes from head to tail was observed in every shell.';

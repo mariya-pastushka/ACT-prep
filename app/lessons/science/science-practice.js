@@ -79,7 +79,7 @@ function ScienceNotebook({ lectureId, questionId, lecture, vocabulary, vocabular
 
 export default function SciencePractice({
   practiceNumber, subtitle, storageKey, groups, questions, lecture, vocabulary,
-  reviewFigures, choiceLayouts, QuestionExtras, children, navigation,
+  reviewFigures, choiceLayouts, QuestionExtras, children, navigation, previousStorageKey,
   vocabularyTitle = 'Словарь к двум текстам',
 }) {
   const practiceTitle = `Practice ${practiceNumber}`;
@@ -94,12 +94,16 @@ export default function SciencePractice({
   useEffect(() => {
     try {
       const saved = localStorage.getItem(storageKey);
-      if (saved) setAttempt(restoreEnglishAttempt(JSON.parse(saved), questions));
+      const previous = !saved && previousStorageKey ? localStorage.getItem(previousStorageKey) : null;
+      if (saved || previous) {
+        const restored = restoreEnglishAttempt(JSON.parse(saved || previous), questions);
+        setAttempt(previous ? {...restored, submitted:false} : restored);
+      }
     } catch {
       setWarning('The saved Science attempt could not be read.');
     }
     setReady(true);
-  }, [storageKey, questions]);
+  }, [storageKey, questions, previousStorageKey]);
 
   useEffect(() => {
     if (!ready) return;

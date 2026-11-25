@@ -1,4 +1,6 @@
+import {bloodLecture,bloodVocabulary} from './science-blood-lecture.mjs';
 export const scienceLecture=[
+ ...bloodLecture,
  {title:'Choose samples that preserve the needed information',titleRu:'Образец должен сохранять то, что измеряют',questions:[1],
  en:'The procedure selects complete, unbroken shells. Fragments may not preserve full dimensions or the full scute count. Evaluate a sample against the measurements required by the study; the number of fragments alone does not establish suitability.',
  ru:'Целый панцирь и множество обломков дают разную информацию. Чтобы измерить полную площадь и общее число щитков, необходимо сохранить соответствующие части образца или иметь обоснованный способ восстановления. В №1 такой способ не описан, а правило отбора прямо требует целые, неповреждённые панцири. Поэтому нехватка полной геометрии — самое прямое объяснение исключения слоя. Не заменяй указанное правило новой причиной только потому, что она звучит научно.',
@@ -21,6 +23,7 @@ export const scienceLecture=[
  exercise:'Does 46% in the first pattern column mean that a shell has 46 scutes?',exerciseRu:'Означает ли 46% в столбце первого рисунка, что у панциря 46 щитков?',answer:'No. It is the percentage of shells in that age group displaying that pattern.',answerRu:'Нет. Это доля панцирей соответствующего возраста, у которых такой порядок щитков. Общее число щитков измеряется отдельно в исследовании 2.'},
 ];
 export const scienceVocabulary=[
+ ...bloodVocabulary,
  ['Fossilized shell','A shell preserved as a fossil.','Ископаемый панцирь. Не путай возраст панциря с возрастом живой черепахи.'],
  ['Seabed / layer','The sea floor / a layer within it.','Морское дно / слой. Образцы отбирали из разных слоёв.'],
  ['Intact / unbroken','Complete and not broken.','Целый / неповреждённый. В №1 это требование к пригодному образцу.'],
