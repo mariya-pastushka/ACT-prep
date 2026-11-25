@@ -1,0 +1,46 @@
+.page [id^="source-line-"]:target {
+  text-decoration: underline;
+  text-decoration-color: #805096;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.page [class*="review"] p,
+.page [class*="review"] li,
+.page [class*="lecture"] p,
+.page [class*="lecture"] li {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.page [class*="review"] { overflow-wrap: anywhere; }
+
+.page [class*="evidenceSources"] { list-style: none; padding-left: 0; }
+.page [class*="evidenceSources"] a {
+  display: inline-block;
+  margin-bottom: 7px;
+  padding: 9px 13px;
+  border: 1px solid #b799c8;
+  border-radius: 9px;
+  background: #f4eafa;
+  color: #57336c;
+  font-size: 14px;
+  text-decoration: none;
+}
+.page [class*="evidenceSources"] a:hover { background: #e8d9f1; }
+.page [class*="evidenceSources"] a:focus-visible { outline: 3px solid #805096; outline-offset: 3px; }
+
+@media (min-width: 740px) {
+  .page [class*="passage"] [class*="sourceParagraph"] { font-size: clamp(.8125rem, 3.5cqi, 1.1rem); }
+  .page [class*="lineText"] { white-space: nowrap; }
+}
+
+@media (740px <= width < 1000px) {
+  .page [class*="questionsPane"] { padding: .5rem; }
+  .page [class*="questionsPane"] > section > article { padding: .55rem; }
+  .page [class*="questionsPane"] [class*="solution"] { padding: .65rem .5rem; }
+  .page [class*="questionsPane"] [class*="translate"] div { padding: 8px 6px; }
+  .page [class*="questionsPane"] blockquote { padding: 10px 8px; }
+  .page [class*="questionsPane"] [class*="ruSupport"] ol,
+  .page [class*="questionsPane"] [class*="ruSupport"] ul { padding-left: 18px; }
+}
