@@ -1,0 +1,21 @@
+export const scienceStorageKey='act-space-practice-9-science-v1';
+
+export const bloodIntroduction='Vasoconstriction involves a narrowing of blood vessels that could lead to poor blood flow in the body if it persists over a long time. Ergotamine is a substance that can cause vasoconstriction. When ergotamine is injected into a normal blood vessel, vasoconstriction occurs quickly at the site of the injection (see Figure 1).';
+export const bloodRelationship='The diameter of the blood vessel at the site of vasoconstriction is less than the diameter of the normal blood vessel, so blood flow has a higher velocity through this narrow site. As a result, the blood pressure in the site of vasoconstriction is less than the blood pressure in the normal blood vessel. Moreover, the higher the velocity of the blood flow through the site of vasoconstriction, the lower the blood pressure at that site.';
+export const bloodProcedure='Blood vessel sections of similar diameters were isolated from laboratory rats and %ΔBP was measured over three experiments. When the researchers needed to create a site of vasoconstriction for some of the experimental trials, they would inject ergotamine to induce vasoconstriction within the blood vessel section.';
+export const bloodExperiments=[
+ {id:1,text:"An artificial heart, which mimics a human's heartbeat, is used to move a constant volume of 500 mL of blood with each beat through four blood vessel sections. These four blood vessel sections were injected with the same amount of ergotamine, leading to sites of vasoconstriction of the same diameter. The rate at which the blood is pumped was varied for the four different blood vessel sections, and the %ΔBP values that resulted were measured.",heading:'Rate of artificial heart beat (beats per minute)',rows:[[60,1.2],[90,9.3],[120,22.3],[150,45.1]]},
+ {id:2,text:'The artificial heart used in Experiment 1 was then used to pump a constant volume of 500 mL of blood with each beat at a constant rate of 90 beats per minute through five other blood vessel sections. These blood vessel sections were injected with different amounts of ergotamine, resulting in sites of vasoconstriction with different diameters. The %ΔBP values were then measured.',heading:'Diameter of site of vasoconstriction (cm)',rows:[[0.4,40.3],[0.6,18.6],[0.8,9.3],[1.0,4.6],[1.2,2.5]]},
+ {id:3,text:'The artificial heart used in Experiment 1 was used to pump different volumes of blood at a constant rate of 90 beats per minute through five blood vessel sections with the same diameter at the site of vasoconstriction. The %ΔBP values were then measured.',heading:'Volume of blood pumped (mL)',rows:[[400,8.4],[450,8.8],[500,9.3],[550,9.7],[600,10.2]]},
+];
+export const vesselRegions=[['A',500,31],['B',1000,29],['C',900,30]];
+export const vesselOrders={F:['A','B','C'],G:['C','B','A'],H:['B','A','C'],J:['A','C','B']};
+// Dimensionless heights relative to the normal reference, not invented mmHg measurements.
+export const pressureChoices={F:[0.40,0.40,0.02],G:[0.597,0.907,0.975],H:[1,1,1],J:[0.40,0.02,0.40]};
+
+export const gasIntroduction='As the pressure on a gas is increased, the volume of that gas is expected to decrease by an inversely proportional amount. For example, if pressure is doubled the volume is halved. Under certain conditions, the volume of the gas will change by an amount that deviates from an inverse proportion. Various 10.00 L samples of gas were subjected to increases in pressure. Table 1 shows the resulting volume changes at 300°C, while Tables 2 and 3 show the volume changes at 25°C and −200°C, respectively. All pressures are measured in atmospheres (atm).';
+export const gasTables=[
+ {id:1,temperature:300,rows:[['Oxygen',1,2,-5.00],['Oxygen',2,4,-5.00],['Oxygen',3,6,-5.00],['Argon',2,4,-5.00],['Argon',4,5,-2.00],['Carbon Dioxide',1,5,-8.00],['Carbon Dioxide',3,6,-5.00],['Carbon Dioxide',4,10,-6.00]]},
+ {id:2,temperature:25,rows:[['Methane',1,2,-5.00],['Methane',2,4,-5.00],['Helium',1,2,-5.00],['Helium',1,5,-8.00],['Helium',2,5,-6.00],['Nitrogen',1,5,-8.00],['Nitrogen',2,4,-5.00],['Nitrogen',4,5,-2.00]]},
+ {id:3,temperature:-200,rows:[['Neon',1,2,-5.02],['Neon',2,4,-5.03],['Neon',4,8,-5.06],['Helium',1,2,-4.98],['Helium',2,4,-4.97],['Hydrogen',1,2,-5.01],['Hydrogen',1,5,-8.02],['Hydrogen',1,10,-9.03]]},
+];

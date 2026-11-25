@@ -4,7 +4,7 @@ import { lecture, lectureRu, vocabularyNotebook } from './english-lecture.mjs';
 
 export const englishTest={
  id:'practice-9-english',title:'Practice 9',storageKey:'act-space-practice-9-english-v1',
- nav:[{label:'English',current:true},{label:'Mathematics',href:'/lessons/practice-9/math'},{label:'Reading',href:'/lessons/practice-9/reading'}],
+ nav:[{label:'English',current:true},{label:'Mathematics',href:'/lessons/practice-9/math'},{label:'Reading',href:'/lessons/practice-9/reading'},{label:'Science',href:'/lessons/practice-9/science'}],
  passage,questions,evidenceRu,lecture,lectureRu,numberParagraphs:true,readingNotebook:vocabularyNotebook,
  instructions:'Read the passage and answer Questions 46–60. Original errors are intentional. Select an underlined phrase or numbered marker to find its question. After checking, use “Show in text” to return to the exact evidence sentence and highlight it.',
  introNote:'После проверки откроются английские evidence и подробные русские разборы: правило, ход рассуждения, примеры и объяснение остальных вариантов. Кнопки «Показать в тексте» ведут к источнику с подсветкой.',

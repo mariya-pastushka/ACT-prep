@@ -6,7 +6,7 @@ export const readingTest={
  id:'practice-9-reading',title:'Practice 9',sectionLabel:'Reading',storageKey:'act-space-practice-9-reading-v1',
  passage:readingPassage,questions:readingQuestions,evidenceRu:readingEvidenceRu,
  lecture:readingLecture,lectureRu:readingLectureRu,readingNotebook,
- nav:[{label:'English',href:'/lessons/practice-9'},{label:'Mathematics',href:'/lessons/practice-9/math'},{label:'Reading',current:true}],
+ nav:[{label:'English',href:'/lessons/practice-9'},{label:'Mathematics',href:'/lessons/practice-9/math'},{label:'Reading',current:true},{label:'Science',href:'/lessons/practice-9/science'}],
  instructions:'Read the passage and answer Questions 1–10. On desktop and tablet, scroll the passage and questions separately. Printed lines match the supplied screenshots. After checking, select an evidence reference to return to the text.',
  introNote:'На телефоне текст расположен перед вопросами. После проверки откроются evidence на английском, пошаговые русские разборы, конспект и словарь.',
  lectureTitle:'Мини-конспект по Reading: увидеть чувства за словами и поступками',
