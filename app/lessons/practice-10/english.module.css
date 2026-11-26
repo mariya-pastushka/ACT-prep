@@ -1,0 +1,36 @@
+.page [class*="passage"] p,
+.page [class*="review"] p,
+.page [class*="review"] li,
+.page [class*="lecture"] p,
+.page [class*="lecture"] li { font-size: 16px; line-height: 1.9; }
+.page [class*="question"] legend,
+.page [class*="choice"],
+.page blockquote[class*="evidence"] { font-size: 16px; }
+.page [class*="review"] { overflow-wrap: anywhere; }
+.page [id^="passage-karaoke10-"]:target {
+  text-decoration: underline;
+  text-decoration-color: #805096;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.page [class*="evidenceSources"] {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.page [class*="evidenceSources"] a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 10px 13px;
+  border: 1px solid #b799c8;
+  border-radius: 9px;
+  background: #f4eafa;
+  color: #57336c;
+  line-height: 1.55;
+  font-size: 14px;
+  text-decoration: none;
+}
+.page [class*="evidenceSources"] a:hover { background: #e8d9f1; }
+.page [class*="evidenceSources"] a:focus-visible { outline: 3px solid #805096; outline-offset: 3px; }
