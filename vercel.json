@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/sat/index.html",
+      "destination": "/sat",
+      "permanent": true
+    }
+  ]
+}

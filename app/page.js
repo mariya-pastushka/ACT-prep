@@ -7,7 +7,7 @@ export default function Home(){const [scores,setScores]=useState([28,30,32]);con
   <nav aria-label="Главная навигация">
     <a href="#format">Формат экзамена</a>
     <a href="#score">Как считают балл</a>
-    <a href="/sat/index.html">Подготовка к SAT</a>
+    <a href="/sat">Подготовка к SAT</a>
   </nav>
   <a className="nav-cta" href="/lessons">Начать свой путь <span>↗︎</span></a>
 </header>
