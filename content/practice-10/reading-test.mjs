@@ -16,6 +16,7 @@ export const readingTest = {
  nav: [
   {label: 'English', href: '/lessons/practice-10'},
   {label: 'Reading', current: true},
+  {label: 'Science', href: '/lessons/practice-10/science'},
  ],
  instructions: 'Read the passage and answer Questions 1–10. On desktop and tablet, scroll the passage and questions separately. After checking, select a line reference to highlight that part of the source.',
  introNote: 'После проверки откроются evidence на английском и пошаговые разборы на русском. В конце есть конспект, словарь и короткие задания.',
