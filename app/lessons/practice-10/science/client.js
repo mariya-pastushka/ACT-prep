@@ -12,6 +12,7 @@ const groups = [
 
 const navigation = [
  {label: 'English', href: '/lessons/practice-10'},
+ {label: 'Mathematics', href: '/lessons/practice-10/math'},
  {label: 'Reading', href: '/lessons/practice-10/reading'},
 ];
 

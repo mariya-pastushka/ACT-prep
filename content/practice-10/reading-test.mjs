@@ -15,6 +15,7 @@ export const readingTest = {
  readingNotebook,
  nav: [
   {label: 'English', href: '/lessons/practice-10'},
+  {label: 'Mathematics', href: '/lessons/practice-10/math'},
   {label: 'Reading', current: true},
   {label: 'Science', href: '/lessons/practice-10/science'},
  ],

@@ -4,7 +4,7 @@ import { lecture, lectureRu, vocabularyNotebook } from './english-lecture.mjs';
 
 export const englishTest={
  id:'practice-10-english',title:'Practice 10',storageKey:'act-space-practice-10-english-v1',
- nav:[{label:'English',current:true},{label:'Reading',href:'/lessons/practice-10/reading'},{label:'Science',href:'/lessons/practice-10/science'}],passage,questions,evidenceRu,lecture,lectureRu,
+ nav:[{label:'English',current:true},{label:'Mathematics',href:'/lessons/practice-10/math'},{label:'Reading',href:'/lessons/practice-10/reading'},{label:'Science',href:'/lessons/practice-10/science'}],passage,questions,evidenceRu,lecture,lectureRu,
  numberParagraphs:true,readingNotebook:vocabularyNotebook,
  instructions:'Read the complete passage and answer Questions 61–75. Original errors are intentional. Keep the printed sentence numbers in mind for Question 63. After checking, use “Show in text” to return to a precise evidence sentence and highlight it.',
  introNote:'После проверки откроются английские evidence и подробные русские разборы: объяснение правила, ход решения, новый пример и разбор других вариантов. Кнопки ведут к нужным предложениям с подсветкой.',

@@ -1,0 +1,75 @@
+.diagram {
+  max-width: 590px;
+}
+
+.diagram svg {
+  max-width: 525px;
+}
+
+.diagram .accent {
+  fill: #69417e;
+  font-weight: 700;
+}
+
+.diagram .label {
+  paint-order: stroke;
+  stroke: #fffdfa;
+  stroke-linejoin: round;
+  stroke-width: 5px;
+}
+
+.dot {
+  fill: #43334e;
+}
+
+.verticalTable {
+  display: none;
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.priceTable caption {
+  text-align: left;
+  font-weight: 700;
+  padding: 0 0 .55rem;
+}
+
+.priceTable th,
+.priceTable td {
+  padding: .45rem .3rem;
+  border: 1px solid #e2d6e8;
+  text-align: center;
+}
+
+.priceTable th {
+  text-align: left;
+  background: #f2eaf7;
+}
+
+.priceTable .emphasis {
+  background: #faedcd;
+}
+
+@media (max-width: 650px) {
+  .diagram svg text {
+    font-size: 21px;
+  }
+
+  .horizontalTable {
+    display: none;
+  }
+
+  .verticalTable {
+    display: table;
+  }
+
+  .priceTable th,
+  .priceTable td {
+    padding: .35rem .5rem;
+  }
+}

@@ -44,10 +44,11 @@ export default function MathPractice({test, MathFigure}){
    {data.submitted&&(lecture||result.missed.length>0)&&<div className={css.resultLinks} lang="ru">{lecture&&<a className="nav-cta" href={"#"+lectureId}>Перейти к мини-лекции ↓</a>}{result.missed.length>0&&<a className="nav-cta" href={"#"+questionId(result.missed[0].id)}>Первая ошибка или пропуск ↓</a>}</div>}
    <section className={styles.questions} aria-label={title+" Mathematics questions"}>
     {questions.map(q=><article className={`${styles.question} ${css.question}`} key={q.id} id={questionId(q.id)}>
-     <fieldset disabled={data.submitted} className={css.fieldset}>
+     <fieldset disabled={data.submitted} className={css.fieldset} aria-describedby={q.afterFigure ? questionId(q.id)+'-prompt' : undefined}>
       <legend className={css.prompt}><span className={styles.questionId}>{q.id}.</span><RichText content={q.prompt}/></legend>
       {q.chartIntro&&<p className={css.chartIntro}>{chartIntroduction}</p>}
       {q.figure&&<MathFigure type={q.figure}/>}
+      {q.afterFigure&&<p id={questionId(q.id)+'-prompt'}><RichText content={q.afterFigure}/></p>}
       <div className={q.choices[0].figure ? css.graphChoices : styles.choices}>
        {q.choices.map(c=><label key={c.label} className={[
         styles.choice, c.figure && css.graphChoice, data.answers[q.id]===c.label && styles.selected,
