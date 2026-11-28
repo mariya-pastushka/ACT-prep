@@ -10,6 +10,7 @@ function Part({node}){
   case 'frac':return <mfrac><Part node={node.top}/><Part node={node.bottom}/></mfrac>;
   case 'power':return <msup><Part node={node.base}/><Part node={node.exponent}/></msup>;
   case 'root':return <msqrt><Part node={node.value}/></msqrt>;
+  case 'nth-root':return <mroot><Part node={node.value}/><Part node={node.index}/></mroot>;
   case 'sub':return <msub><Part node={node.base}/><Part node={node.index}/></msub>;
   case 'words':return <mtext>{node.value}</mtext>;
   case 'aligned':return <mtable columnalign="right left" columnspacing="0.3em" rowspacing="0.4em">

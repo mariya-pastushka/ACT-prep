@@ -1,0 +1,68 @@
+.figure {
+  max-width: 570px;
+}
+
+.figure svg {
+  max-width: 510px;
+}
+
+.figure .small {
+  font-size: 15px;
+}
+
+.figure .accent {
+  fill: #714885;
+  font-weight: 700;
+}
+
+.figure .label {
+  paint-order: stroke;
+  stroke: #fffdfa;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: #43334e;
+}
+
+.bar {
+  fill: #d5c7dd;
+  stroke: #695573;
+}
+
+.selectedBar,
+.shade {
+  fill: #b991cc;
+  stroke: #695573;
+}
+
+.poolChoice {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+
+.poolAxis,
+.poolLine {
+  fill: none;
+  stroke: #43334e;
+  stroke-width: 1.3;
+  vector-effect: non-scaling-stroke;
+}
+
+.poolLine {
+  stroke-width: 2;
+}
+
+@media (max-width: 650px) {
+  .figure svg text {
+    font-size: 22px;
+  }
+
+  .figure svg.clients text {
+    font-size: 19px;
+  }
+}
